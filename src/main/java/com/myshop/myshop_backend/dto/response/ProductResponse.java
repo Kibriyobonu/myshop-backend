@@ -1,9 +1,19 @@
 package com.myshop.myshop_backend.dto.response;
-import lombok.Data;
 
-@Data
+import lombok.*;
+
+import java.util.UUID;
+
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
+@Builder
 public class ProductResponse {
-    private Long id;
+    private UUID id;
     private String name;
-    private Double price;
+    private String description;
+    private double price;
+    private String categoryName;
+    private String imageUrl;
 }
