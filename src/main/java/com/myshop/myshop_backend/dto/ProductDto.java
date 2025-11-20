@@ -1,4 +1,4 @@
-package com.myshop.myshop_backend.dto.response;
+package com.myshop.myshop_backend.dto;
 
 import lombok.*;
 
@@ -9,10 +9,11 @@ import java.util.UUID;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-public class ProductResponse {
+public class ProductDto {
     private UUID id;
     private String name;
     private String description;
-    private double price;
-    private String imageUrl;
+    private Double price;
+    private String imageUrl;  // frontendga qaytadi
+    private UUID categoryId;
 }

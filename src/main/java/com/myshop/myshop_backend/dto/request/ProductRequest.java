@@ -11,12 +11,10 @@ import java.util.UUID;
 @AllArgsConstructor
 @Builder
 public class ProductRequest {
-
     private String name;
     private String description;
-    private double price;
+    private Double price;
     private UUID categoryId;
 
-    // Rasmni jo‘natish uchun
-    private MultipartFile file;
+    private MultipartFile file; // rasm fayli
 }

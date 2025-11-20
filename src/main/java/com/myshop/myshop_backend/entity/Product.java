@@ -4,29 +4,28 @@ import jakarta.persistence.*;
 import lombok.*;
 
 import java.util.UUID;
+@Entity
+@Table(name = "products")
 @Getter
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-@Entity
-@Table(name = "products")
 public class Product {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.UUID)
+    @GeneratedValue
     private UUID id;
 
     private String name;
 
-    private Double price;
-
     private String description;
+
+    private double price;
 
     private String imageUrl;
 
     @ManyToOne
     @JoinColumn(name = "category_id")
     private Category category;
-
 }
